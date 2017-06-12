@@ -1,0 +1,59 @@
+border-1px($color)
+  position relative
+  &:after
+    content ''
+    display block
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    border-top 1px solid $color
+
+
+/*去掉最后一个元素的border*/
+border-none()
+  &::after
+    border none
+
+// 文字溢出隐藏
+text-hide()
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+split-border()
+  box-sizing border-box
+  height 16px
+  border-top 1px solid rgba(7,17,27,0.1)
+  border-bottom 1px solid rgba(7,17,27,0.1)
+  background #f3f5f7
+
+/* 背景图片 */
+bg-img($url)
+  background-image url($url + '@2x.png')
+  background-size 100%
+  background-repeat no-repeat
+
+/* icon 图标 */
+icon($scale)
+  display inline-block
+  width 12px
+  height 12px
+  margin-right 4px
+  vertical-align top
+
+  // 定义的不同类来显示不同的图片
+  &.decrease
+    bg-img('./img/decrease_' + $scale)
+  &.discount
+    bg-img('./img/discount_' + $scale)
+  &.guarantee
+    bg-img('./img/guarantee_' + $scale)
+  &.invoice
+    bg-img('./img/invoice_' + $scale)
+  &.special
+    bg-img('./img/special_' + $scale)
+
+/* 媒体查询，根据设备像素比来确定使用何种图像 */
+@media (-webkit-min-device-pixel-ratio: 3),(min-decice-pixel-ratio: 3)
+  background-image url($url + '@3x.png')

@@ -1,0 +1,172 @@
+@import '../../common/stylus/mixin'
+
+.header
+  color #fff
+  position relative
+  overflow hidden
+
+  .content-wrapper
+    position relative
+    padding 24px 12px 18px 24px
+    font-size 0
+    .avatar
+      display inline-block
+      vertical-align top
+      img
+        border-radius 2px
+    .content
+      display inline-block
+      margin-left 16px
+      font-size 0
+      .title
+        margin 2px 0 8px
+        .brand
+          display inline-block
+          width 30px
+          height 18px
+          vertical-align top
+          bg-img('./img/brand')
+        .name
+          font-size 16px
+          margin-left 6px
+          line-height 18px
+          font-weight bold
+      .description
+        font-size 12px
+        line-height 12px
+        margin-bottom 10px
+      .supports
+        .text
+          font-size 10px
+          line-height 12px
+        .icon
+          icon(1)
+    .supports-count
+      position absolute
+      right 12px
+      bottom 14px
+      padding 0 8px
+      height 24px
+      line-height 24px
+      text-align center
+      background-color rgba(0,0,0,0.2)
+      border-radius 14px
+      font-size 0
+      .count
+        font-size 10px
+        vertical-align top
+      .arrow
+        font-size 10px
+        line-height 24px
+        margin-left 2px
+
+  .bulletin-wrapper
+    position relative
+    padding 0 22px 0 12px
+    height 28px
+    line-height 28px
+    background-color rgba(7,17,27,0.2)
+    text-hide()
+    .bulletin-title
+      display inline-block
+      width 22px
+      height 12px
+      font-size 10px
+      margin-top 8px
+      bg-img('./img/bulletin')
+      vertical-align top
+    .bulletin-text
+      vertical-align top
+      font-size 10px
+      margin-left 4px
+    .arrow
+      position absolute
+      right 10px
+      top 8px
+      font-size 10px
+
+  .background
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index:-1
+    background-color rgba(7,17,27,0.5)
+    img
+      filter blur(10px)
+
+  .detail
+    position fixed
+    z-index 100
+    left 0
+    right 0
+    top 0
+    height 100%
+    overflow auto
+    background-color rgba(7,17,27,0.8)
+    transition all 0.5s ease
+    &.fade-enter-active,&.fate-leave
+      opacity 1
+    &.fade-enter,&.fade-leave-active
+      opacity 0
+    .detail-wrapper
+      min-height 100%
+      display inline-block
+      width 100%
+      height auto
+      .detail-main
+        margin 64px 36px 0 36px
+        padding-bottom 64px
+        .name
+          text-align center
+          margin-bottom 16px
+          font-size 16px
+          line-height 16px
+          font-weight 700
+        .star-wrapper
+          height 24px
+          margin 16px 0 28px
+          text-align center
+        .title
+          display flex
+          margin 32px auto 24px
+          .text
+            padding 0 12px
+          .line
+            flex 1
+            position relative
+            top -6px
+            border-bottom:1px solid rgba(255,255,255,0.2)
+        .info-list
+          padding 0 12px
+          font-size 0
+          .list-item
+            margin 12px 0
+            &:last-child
+              margin-bottom 0
+          .icon
+            icon(2)
+            margin-right 6px
+            width 16px
+            height 16px
+          .text
+            font-size 12px
+            line-height 15px
+            font-weight 200
+            color #fff
+        .notification
+          font-size 12px
+          font-weight 200
+          color #fff
+          line-height 24px
+          padding 0 12px
+    .detail-close
+      display block
+      text-align center
+      position relative
+      height 32px
+      margin-top -64px
+      font-size 32px
+      color rgba(255,255,255,0.5)
+      clear both

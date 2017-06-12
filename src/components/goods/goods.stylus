@@ -1,0 +1,95 @@
+@import '../../common/stylus/mixin'
+
+.goods
+  display flex
+  width 100%
+  position absolute
+  top 174px
+  bottom 48px
+  .menu-wrapper
+    overflow hidden
+    background #f3f5f7
+    width 80px
+    flex 0 0 80px
+    .menu-list
+      font-size 0
+    .menu-item
+      display table
+      height:54px;
+      font-size 12px
+      font-weight 200
+      line-height 14px
+      color rgb(12,23,33)
+      padding 0 12px
+      &.current
+        position relative
+        margin-top -1px
+        z-index 10
+        background rgb(255,255,255)
+        .text
+          font-weight 700
+          &::after
+            border none
+    .text
+      display table-cell
+      vertical-align middle
+      width 56px
+      border-1px(rgba(7,17,27,0.1))
+    .icon
+      icon(3)
+      margin-right 2px
+
+  .foods-wrapper
+    overflow hidden
+    flex-grow 1
+    .category-list
+      font-size 0
+    .title
+      font-size 12px
+      line-height 26px
+      color rgb(147,153,159)
+      background #f3f5f7
+      padding-left 14px
+      border-left 2px solid #d9dde1
+    .foods-listItem
+      display flex
+      margin 18px
+      padding-bottom 18px
+      border-1px(rgba(7,17,27,0.1))
+      &:last-child
+        border-none()
+        margin-bottom 0
+    .avatar
+      flex 0 0 57px
+      width 57px
+      margin-right 10px
+      img
+        border-radius 1px
+    .info
+      .name
+        font-size 14px
+        line-height 14px
+        color rgb(7,17,27)
+        padding-top 2px
+      .description
+        padding 8px 0
+      .sellCount
+        margin-right 12px
+      .description,.sellStatus
+        font-size 10px
+        line-height 12px
+        color rgb(147,153,159)
+      .price
+        font-size 14px
+        color rgb(208,14,0)
+        font-weight 700
+        line-height 24px
+        margin-right 8px
+      .oldPrice
+        font-size 10px
+        line-height 24px
+        color rgb(147,153,159)
+    .cartcontrol-wrapper
+      position absolute
+      right 0
+      bottom 12px
